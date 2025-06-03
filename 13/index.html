@@ -4,10 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Element By Id in Javascript - DOM Manipulation Tutorial</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        html, body {
+            height: 100%;
+            width: 100%;
+            background-color: #141414;
+            color: #f5f5f5;
+        }
 
+        .change-color{
+            color: aqua;
+        }
+    </style>
 </head>
 <body>
+
+    <h1>Hello <span id="select-me">PEOPLE!</span></h1>
+    <button onclick="changeColor()" class="change-button" >Change color</button>
     
-    <script src="main.js"></script>
+    <script>
+        const el = document.querySelector("select-me");
+        el.classList.toggle("change-color")
+
+        function changeColor (){
+            const btn = document.querySelector("#select-me");
+            btn.classList.toggle("change-color")
+        }
+    </script>
 </body>
 </html>
