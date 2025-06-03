@@ -6,8 +6,74 @@
     <title>
         Get Elements By Class Name in Javascript - DOM Manipulation
     </title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        html, body {
+            height: 100%;
+            width: 100%;
+            background-color: #141414;
+            color: #f5f5f5;
+        }
+
+        
+    </style>
 </head>
 <body>
     
+    <div class="block">
+        <h1>Hello1</h1>
+    </div>
+
+    <div class="space">
+        <h1>hello2</h1>
+    </div>
+
+    <div class="block">
+        <h1>hello3</h1>
+    </div>
+
+
+    <script>
+        // getElementsByClassName takes multiple classes at once and returns in an arry
+
+        const body = document.querySelector("body");
+        body.style.textAlign = "center"
+
+
+        const elements = document.getElementsByClassName("block")
+
+        for(let i = 0; i < elements.length; i++){
+            // console.log(elements[i])
+            elements[i].style.background = "green"
+        }
+
+
+        //assignment
+
+        const elems = document.getElementsByClassName("block")
+
+        for(let i = 0; i < elems.length; i++){
+            elems[i].classList.add("remove");
+        }
+
+        // did not work cuz of something, search for it I dont have enough energy to write here
+        // const del = document.getElementsByClassName("remove")
+        
+        // for(let i = 0; i < del.length; i++){
+        //     del[i].remove()
+        // }
+
+        // Solution by AI
+        const del = Array.from(document.getElementsByClassName("remove"));
+
+        del.forEach(elem => elem.remove());
+        
+    </script>
 </body>
 </html>
