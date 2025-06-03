@@ -23,9 +23,43 @@
     </style>
 </head>
 <body>
+
+    <nav>
+        <ul>
+            <li>Sign Up</li>
+            <li>Contact</li>
+            <li>Careers</li>
+        </ul>
+    </nav>
+
+    <div>
+        <h1 id="hello">Hello</h1>
+    </div>
+
+    <h2>Me is me</h2>
     
     <script>
-        
+        const hello = document.getElementById("hello");
+
+        hello.addEventListener("click", () => {
+            
+        if (hello.style.color === "red"){
+                hello.style.color = "green"
+            } else {
+                hello.style.color = "red"
+            }
+        })
+
+
+        const allElems = document.querySelector("body").children;
+
+        for(let i = 0; i < allElems.length; i++){
+            allElems[i].addEventListener("click", ()=>{
+                allElems[i].remove();
+            })
+        }
+
+
     </script>
 </body>
 </html>
