@@ -8,7 +8,7 @@ const cityTemp = document.getElementById("city-temp");
 // http://api.weatherapi.com/v1/current.json?key=2f1a82217b9f41358c0165922250506&q=London&aqi=yes
 
 async function getData (inputDetails){
-    const promise = await fetch(`http://api.weatherapi.com/v1/current.json?key=2f1a82217b9f41358c0165922250506&q=${inputDetails}&aqi=yes`)
+    const promise = await fetch(`https://api.weatherapi.com/v1/current.json?key=2f1a82217b9f41358c0165922250506&q=${inputDetails}&aqi=yes`)
 
     return await promise.json();
 }
