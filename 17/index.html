@@ -20,6 +20,11 @@
             background-color: #141414;
             color: #f5f5f5;
         }
+
+        button {
+            padding: 10px;
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
@@ -37,9 +42,44 @@
     </div>
 
     <h2>Me is me</h2>
+
+    <br><br><br><hr><hr>
+    <button id="add">Add</button>
+    <button id="remove">Remove</button>
+    <div id="container" style="margin:100px;"></div>
+
     
     <script>
-        
+
+        // TODO PROTOTYPE EXPERIMENT
+        const container = document.getElementById("container");
+        const addBtn = document.getElementById("add");
+        const removeBtn = document.getElementById("remove");
+        let count = 1;
+
+        // ADDING TASKS
+        addBtn.addEventListener("click", () => {
+            const el = document.createElement("h3");
+            const input = prompt("Enter your task...")
+            
+            el.innerText = `${count}: ${input}`;
+            
+            container.append(el)
+            count++;
+        })
+
+        // REMOVING TASKS
+        removeBtn.addEventListener("click", () => {
+            
+            const allElems = document.querySelector("#container").children;
+            
+            for (let i = 0; i < allElems.length; i++){
+                allElems[i].addEventListener("click", () => {
+                    allElems[i].remove();
+                })
+            }
+        })
+
     </script>
 </body>
 </html>
