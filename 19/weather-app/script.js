@@ -16,7 +16,7 @@ async function getData (inputDetails){
 btn.addEventListener("click", async () => {
     const inputValue = input.value
     const result = await getData(inputValue);
-    console.log(result)
+    // console.log(result)
     
     cityName.innerText = `Location: ${result.location.name}, ${result.location.region}, ${result.location.country}`;
     cityTime.innerText = `Date & Time: ${result.location.localtime}`;
