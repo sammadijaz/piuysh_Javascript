@@ -18,7 +18,7 @@ async function getData (lat, long){
     
 
 
-    console.log(result)
+    // console.log(result)
 }
 
 function unSucessfullyRecievedLocation (){
@@ -30,29 +30,3 @@ btn.addEventListener("click", async () => {
     const result = await navigator.geolocation.getCurrentPosition(sucessfullyRecievedLocation, unSucessfullyRecievedLocation)
 
 })
-
-
-country
-: 
-"Pakistan"
-lat
-: 
-32.933
-localtime
-: 
-"2025-06-09 00:04"
-localtime_epoch
-: 
-1749409484
-lon
-: 
-73.733
-name
-: 
-"Jhelum"
-region
-: 
-"Punjab"
-tz_id
-: 
-"Asia/Karachi"
