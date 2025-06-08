@@ -38,12 +38,31 @@
         input, button {
             padding: 1rem;
         }
+        
+        h1 {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+
+        /* Media query for screen sizes 768px or less (e.g., tablets and smaller) */
+        @media (max-width: 768px) {
+        h1 {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+        }
+
+        input, button {
+            padding: 0.5rem;
+        }
+        
+        }
     </style>
 </head>
 <body>
     <div>
-        <input id="input" type="text" placeholder="Enter City Name...">
-        <button id="btn">Enter</button>
+        <h1>Getting your location and giving you weather forcast</h1>
+        <button id="btn">Click here</button>
     </div>
 
     <div>
