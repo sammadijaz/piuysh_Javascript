@@ -1,31 +1,58 @@
 function currentTime (){
-    const time = new Date();
-    const formattedTime = `${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
 
-    // const now = new Date();
-    // const timeString = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', second: "numeric", hour12: true });
-    // // console.log(timeString); // Output: e.g., "11:47 PM"
+    // LEARNING
+    // const time = new Date();
+    // const formattedTime = `${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
+    // document.getElementById("input-time").innerText = formattedTime;
+
+
+    // GOT FROM THE WEB
+    const now = new Date();
+    const timeString = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', second: "numeric", hour12: true });
+    // console.log(timeString); // Output: e.g., "11:47 PM"
+    document.getElementById("input-time").innerText = timeString;
 
     
-    document.getElementById("input-time").innerText = formattedTime;
 
-} 
-
-
-const input = prompt("Timer in Seconds: ");
+}  
+setInterval(currentTime, 1000)
 
 
-function display (){
-    document.getElementById("input-time").innerText = interval + 1
-    console.log(interval +1)
-}
+////// ASSIGNMENT ////////
 
-const interval = setInterval(display, input * 1000);
+const btn2 = document.getElementById("btn2")
 
+let i = 1;
 
+btn2.addEventListener("click", () => {
 
-const btn = document.getElementById("btn");
+    let userInput = prompt("For how many seconds should the timer last?")
+    
+    let timer = setInterval(() => {
+        document.getElementById("input-timer").innerText = `Timer: ${i}`;
+        i++;
 
-btn.addEventListener("click", () => {
-    clearInterval(interval)
+        if (i > userInput){
+        clearInterval(timer)
+        console.log("timer stopped!")
+    }
+
+    }, 1000);
+    
 })
+
+const btn3 = document.getElementById("btn3");
+
+btn3.addEventListener("click",() => {
+    window.location.reload()
+})
+
+
+
+
+
+
+
+
+
+
