@@ -30,12 +30,13 @@ btn2.addEventListener("click", () => {
     
     let timer = setInterval(() => {
         document.getElementById("input-timer").innerText = `Timer: ${i}`;
-        i++;
+        
+        if (i == userInput){
+            clearInterval(timer)
+            console.log("timer stopped!")
+        }
 
-        if (i > userInput){
-        clearInterval(timer)
-        console.log("timer stopped!")
-    }
+        i++;
 
     }, 1000);
     
