@@ -36,4 +36,4 @@ const customSize = fontSizer(inputValue)
 
 btn.addEventListener("click", customSize)
 
-
+// I couldnt figure it out something so I left it here
